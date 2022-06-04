@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        print("That String");
+        print("That String " + 21);
         print(21);
     }
 
