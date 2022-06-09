@@ -2,11 +2,11 @@ public class HomeworkForLesson11 {
     // Ex.1
     public static void main(String[] args) {
         print(checkTriangle(3, 4, 5));
-        print(checkTriangle(-2, 2, 2));
+        print(checkTriangle(5, 1, 5));
     }
 
     private static boolean checkTriangle(int a, int b, int c) {
-    return (a > 0 & b > 0 & c > 0) & (a + b > c || a + c > b || b + c > a);
+    return (a > 0 & b > 0 & c > 0) & (a + b > c & a + c > b & b + c > a);
     }
 
     private static void print(boolean x) {
@@ -17,3 +17,4 @@ public class HomeworkForLesson11 {
         }
     }
 }
+
