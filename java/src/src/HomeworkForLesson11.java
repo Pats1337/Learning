@@ -45,7 +45,7 @@ public class HomeworkForLesson11 {
         System.out.println("The lowest number received: " + x);
     }
 }
-*/
+
     // Ex.3
     public static void main(String[] args) {
         print(checkDay(true, true));
@@ -76,3 +76,101 @@ public class HomeworkForLesson11 {
         return x;
     }
     }
+
+
+    // Ex. 4
+    public static void main(String[] args) {
+        print(checkTriangle(30, 20, 130));
+    }
+
+    private static void print(int x, int y) {
+        if (x == -1 & y == -1) {
+            System.out.println("Error, the passed values cannot form a triangle.");
+        } else if (x == 89) {
+            if (y == 65) {
+                System.out.println("This is an acute-angled isosceles triangle");
+            } else if (y == 60) {
+                System.out.println("This is an acute-angled equilateral triangle");
+            } else {
+                System.out.println("This is an acute-angled triangle");
+            }
+        } else if (x == 91) {
+            if (y == 65) {
+                System.out.println("This is an obtuse isosceles triangle");
+            } else if (y == 30) {
+                System.out.println("This is an obtuse triangle");
+            }
+        } else {
+            if (y == 65) {
+                System.out.println("This is an isosceles right triangle");
+            } else if (y == 30) {
+                System.out.println("This is a right triangle");
+            }
+        }
+    }
+
+
+    public static int checkTriangle(int a, int b, int c) {
+        int x;
+        int y;
+        if ((a <= 0 || b <= 0 || c <= 0) & (a + b + c != 180)) {
+            x = -1;// Error, the passed values cannot form a triangle.
+            y = -1;
+        } else if (a < 90 & b < 90 & c < 90) {
+            x = 89; // Acute triangle
+            if ((a == b & != c) || (a == c & != b) || (b == c & != a)){
+                y = 65; // An isosceles triangle
+            } else if (a == b == c) {
+                y = 60; // Equilateral triangle
+            } else {
+                y = 30; // Versatile triangle
+            }
+        } else if (a > 90 || b > 90 || c > 90) {
+            x = 91; // A dull-angled triangle
+            if ((a == b & != c) || (a == c & != b) || (b == c & != a)){
+                y = 65; // An isosceles triangle
+            } else{
+                y = 30; // Versatile triangle
+            }
+        } else {
+            x = 90;
+            if ((a == b & != c) || (a == c & != b) || (b == c & != a)){
+                y = 65; // An isosceles triangle
+            } else{
+                y = 30; // Versatile triangle
+            }
+        }
+        return x, y;
+    }
+
+     */
+    // Ex. 5
+    public static void main(String[] args) {
+        print(checkAge(18));
+        print(checkAge(11));
+        print(checkAge(-1));
+        print(checkAge(1000));
+        print(checkAge(21));
+        print(checkAge(90));
+
+    }
+
+    private static boolean checkAge(int age) {
+        boolean x;
+        if (age >= 18 & age <= 90){
+            x = true;
+        }else {
+            x = false;
+        }
+        return x;
+    }
+
+    private static void print(boolean x){
+        if (x) {
+            System.out.println("Access allowed.");
+        } else {
+            System.out.println("Access denied. You are a bot");
+        }
+    }
+
+}
