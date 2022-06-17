@@ -415,13 +415,14 @@ public class HomeworkForLesson11 {
 
     private static int avgScore(float i, float i1, float i2, float i3, float i4) {
         int avgScore;
+        float x = (i + i1 + i2 + i3 + i4) / 5;
         if ((i > 5 || i <= 0) || (i1 > 5 || i1 <= 0) || (i2 > 5 || i2 <= 0) || (i3 > 5 || i3 <= 0) || (i4 > 5 || i4 <= 0)){
             avgScore = -1;
-        } else if (((i + i1 + i2 + i3 + i4) / 5) < 3){
+        } else if (x < 3){
             avgScore = 2;
-        } else if (((i + i1 + i2 + i3 + i4) / 5) < 4){
+        } else if (x < 4){
             avgScore = 3;
-        } else if (((i + i1 + i2 + i3 + i4) / 5) < 5){
+        } else if (x < 5){
             avgScore = 4;
         } else {
             avgScore = 5;
