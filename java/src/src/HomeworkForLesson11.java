@@ -78,7 +78,7 @@ public class HomeworkForLesson11 {
         }
 
 
-        // Ex. 4
+        // Ex.4
         public static void main(String[] args) {
             print(checkTriangle(60, 60, 60));
         }
@@ -142,7 +142,7 @@ public class HomeworkForLesson11 {
         }
     }
 
-        // Ex. 5
+        // Ex.5
         public static void main(String[] args) {
             print(checkAge(18));
             print(checkAge(11));
@@ -234,7 +234,7 @@ public class HomeworkForLesson11 {
         }
         }
 
-        // Ex. 7
+        // Ex.7
         public static void main(String[] args) {
             print(nameVerification("Александр"));
             print(nameVerification("Антон"));
@@ -261,7 +261,7 @@ public class HomeworkForLesson11 {
         }
         }
 
-    // Ex. 8
+    // Ex.8
     private static int count;
     public static void main(String[] args) {
         print(callCounter());
@@ -350,7 +350,7 @@ public class HomeworkForLesson11 {
     }
 
 
-    //Ex.11
+    // Ex.11
     public static void main(String[] args) {
         print(stringComparison("equal","equal"));
         print(stringComparison("equal1","equal"));
@@ -368,7 +368,7 @@ public class HomeworkForLesson11 {
     }
 
 
-    //Ex.12
+    // Ex.12
     public static void main(String[] args) {
         print(checkUrl("http://google.com"));
         print(checkUrl("some text"));
@@ -389,7 +389,7 @@ public class HomeworkForLesson11 {
 }
 
 
-    //Ex.13
+    // Ex.13
     public static void main(String[] args) {
         print(avgScore(4f, 5f, 5f, 4f, 4f));
         print(avgScore(5f, 5f, 5f, 5f, 5f));
@@ -431,8 +431,8 @@ public class HomeworkForLesson11 {
     }
     }
 
-     */
-    //Ex.14
+
+    // Ex.14
     public static String name;
     public static void main(String[] args) {
         name = "Ivan Ivanov";
@@ -476,3 +476,25 @@ public class HomeworkForLesson11 {
         return nameStatus;
     }
     }
+
+     */
+// Ex.15
+    public static void main(String[] args) {
+        module(10);
+        module(-10);
+        module(0);
+    }
+
+    private static int module(int i) {
+        int status;
+        if (i == 0) {
+            System.out.println("It's ZERO!");
+            status = i;
+        } else if (i > 0) {
+            status = i;
+        } else {
+            status = i * -1;
+        }
+        return status;
+    }
+}
