@@ -327,7 +327,7 @@ public class HomeworkForLesson11 {
 
 }
 
-     */
+
     // Ex.10
     public static void main(String[] args) {
         print(checkLGBT("male", "female"));
@@ -346,5 +346,23 @@ public class HomeworkForLesson11 {
 
     private static boolean checkLGBT(String x, String y) {
         return !x.equals(y);
+    }
+    }
+
+     */
+    //Ex.11
+    public static void main(String[] args) {
+        print(stringComparison("equal","equal"));
+        print(stringComparison("equal1","equal"));
+        print(stringComparison("equal","equal1"));
+        print(stringComparison("",""));
+    }
+
+    private static void print(boolean stringComparison) {
+        System.out.println(stringComparison);
+    }
+
+    private static boolean stringComparison(String s, String s1) {
+        return (!s.isEmpty() || !s1.isEmpty()) & s.equals(s1);
     }
     }
