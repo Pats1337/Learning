@@ -42,7 +42,6 @@ public class HomeworkForLesson13 {
         return multi;
     }
 
-     */
     //Ex.3
     public static void main(String[] args) {
         print(negativeCounter(new int[]{-1, 10, 15, -2, -3, 1000}));
@@ -56,11 +55,41 @@ public class HomeworkForLesson13 {
 
     private static int negativeCounter(int[] ints) {
         int negativeCounter = 0;
-        for (int i = 0; i < ints.length; i++){
-            if (ints[i] < 0){
+        for (int i = 0; i < ints.length; i++) {
+            if (ints[i] < 0) {
                 negativeCounter++;
             }
         }
         return negativeCounter;
+    }
+
+     */
+
+    //Ex.4
+    public static int NUMBER;
+
+    public static void main(String[] args) {
+        NUMBER = 13;
+        print(findInt(NUMBER, new int[]{10, 11, 12, 13, 13, 13, 1, 13, 13}));
+        NUMBER = 2;
+        print(findInt(NUMBER, new int[]{10, 11, 12, 13, 13, 13, 1, 13, 13}));
+        NUMBER = 11;
+        print(findInt(NUMBER, new int[]{10, 11, 12, 13, 13, 13, 1, 13, 13}));
+        NUMBER = 1;
+        print(findInt(NUMBER, new int[]{10, 11, 12, 1, 1, 13, 1, 13, 13}));
+    }
+
+    private static void print(int n) {
+        System.out.println("Число " + NUMBER + " встречается в массиве " + n + " раз.");
+    }
+
+    private static int findInt(int num, int[] ints) {
+        int n = 0;
+        for (int i = 0; i < ints.length; i++) {
+            if (NUMBER == ints[i]) {
+                n++;
+            }
+        }
+        return n;
     }
 }
