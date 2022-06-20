@@ -117,7 +117,7 @@ public class HomeworkForLesson13 {
         print(arithmeticProgression(new float[]{1, 2, 3, 4, 5, 6, 7}));
         print(arithmeticProgression(new float[]{2, 4, 6, 8}));
         print(arithmeticProgression(new float[]{0, 3, 6, 9, 12, 15}));
-        print(arithmeticProgression(new float[]{1, 3, 3, 49, 12, 15}));
+        print(arithmeticProgression(new float[]{1, 2, 3, 49, 5, 6}));
     }
 
     private static void print(boolean b) {
