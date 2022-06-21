@@ -57,7 +57,7 @@ public class HomeworkForLesson14 {
                 i0 = i1;
                 i1 = i2;
             }
+            System.out.println();
         }
-        System.out.println();
     }
 }
