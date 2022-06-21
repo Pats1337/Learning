@@ -93,7 +93,6 @@ public class HomeworkForLesson14 {
         return diff;
     }
 
-     */
     //Ex.6
     public static void main(String[] args) {
         mirrorArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
@@ -107,6 +106,34 @@ public class HomeworkForLesson14 {
             System.out.print(numbers[i] + " ");
         }
         System.out.println();
+    }
+
+     */
+    //Ex.7
+    public static void main(String[] args) {
+        findThis(new String[]{"hola", "hila", "this", "those", "ulala"});
+        findThis(new String[]{"hola", "hila", "this", "this", "ulala"});
+        findThis(new String[]{"this", "this", "this", "this", "this"});
+        findThis(new String[]{});
+    }
+
+    private static void findThis(String[] strings) {
+        boolean checkMore = false;
+        if (strings.length == 0) {
+            System.out.println("Error, array is empty!");
+        } else {
+            for (int i = 0; i < strings.length; i++) {
+                if (strings[i].equals("this")) {
+                    if (checkMore) {
+                        System.out.print(", " + i);
+                    } else {
+                        System.out.print(i);
+                    }
+                    checkMore = true;
+                }
+            }
+            System.out.println();
+        }
     }
 }
 
