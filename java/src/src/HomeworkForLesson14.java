@@ -81,12 +81,12 @@ public class HomeworkForLesson14 {
         } else {
             min = numbers[0];
             max = numbers[0];
-            for (int i = 0; i < numbers.length; i++) {
-                if (numbers[i] <= min) {
-                    min = numbers[i];
+            for (int number : numbers) {
+                if (number <= min) {
+                    min = number;
                 }
-                if (numbers[i] >= max) {
-                    max = numbers[i];
+                if (number >= max) {
+                    max = number;
                 }
             }
             diff = max - min;
