@@ -4,7 +4,8 @@ public class WhileAndInputToTheConsole {
     //Ex.1
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        while (true) {
+        int count = 0;
+        while (count < 5) {
             System.out.print("Введите Ваше имя: ");
             String name = scanner.next();
             if (name.equals("Даниил")) {
@@ -12,6 +13,7 @@ public class WhileAndInputToTheConsole {
                 break;
             }
             System.out.println("Привет, " + name + "!");
+            count++;
         }
     }
 }
