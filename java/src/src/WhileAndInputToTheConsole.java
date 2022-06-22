@@ -36,8 +36,6 @@ public class WhileAndInputToTheConsole {
         }
     }
 
-     */
-
     //Ex.3 (Credit bot)
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -56,6 +54,27 @@ public class WhileAndInputToTheConsole {
             System.out.println("Извините, размер Вашей заработной платы меньше минимальной суммы.\nВ кредитовании ОТКАЗАНО!");
         } else {
             System.out.println("Извините, срок кредитования превышает максимальный лимит.\nВ кредитовании ОТКАЗАНО!");
+        }
+    }
+
+     */
+    //Ex.4 (Job offer bot)
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Здравствуйте, я HR компании Яндекс.\nДля получения приглашения на работу необходимо ответить на ряд вопросов.");
+        while (true) {
+            System.out.print("Подскажите, стаж вашей работы: ");
+            int exp = scanner.nextInt();
+            System.out.print("Знаете ли Вы Kotlin? ");
+            String kotlin = scanner.next();
+            System.out.print("Умеете пользоваться Git? ");
+            String git = scanner.next();
+            if (exp >= 3 && kotlin.equals("Да") && git.equals("Да")) {
+                System.out.println("Отлично! Вы нам подходите.\nJob offer received");
+            } else {
+                System.out.println("Мы Вам перезвоним.\nJob rejected");
+            }
+            break;
         }
     }
 }
