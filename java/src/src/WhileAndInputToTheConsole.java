@@ -91,7 +91,7 @@ public class WhileAndInputToTheConsole {
         while (count < 10) {
             int number2 = scanner.nextInt();
             diff1 = number2 - lastNum;
-            if (diff1 != diff0){
+            if (diff1 != diff0) {
                 System.out.println("Введенные числа не являются арифмитической прогрессией!");
                 break;
             }
