@@ -4,7 +4,7 @@ public class HomeworkForLesson19 {
         boolean valid = Rectangle.areValidArguments(2,3,2,2);
         if (valid) {
             Rectangle rectangle = new Rectangle(2,3,2,2);
-            System.out.println(rectangle.isSquare());
+            System.out.println(rectangle.getDescription());
         } else{
             System.out.println("Стороны не могут образовать прямоугольник");
         }
