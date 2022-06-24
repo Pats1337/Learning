@@ -1,34 +1,17 @@
-public class Rectangle {
-    private final int sideA;
-    private final int sideB;
-    private final int sideC;
-    private final int sideD;
-
-    public Rectangle(int sideA, int sideB, int sideC, int sideD) {
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.sideC = sideC;
-        this.sideD = sideD;
+public class Rectangle extends Figure {
+    public Rectangle(double a, double b) {
+        super(new double[]{a, b});
     }
-
-    public Rectangle(Point a, Point b, Point c, Point d) {
-        this(a.getDistanceTo(b), b.getDistanceTo(c), c.getDistanceTo(d), a.getDistanceTo(d));
+    protected String getType(){
+        return "Прямоугольник";
     }
-
-    public static boolean areValidArguments(int sideA, int sideB, int sideC, int sideD) {
-        return sideA > 0 &&
-                sideB > 0 &&
-                sideC > 0 &&
-                sideD > 0 &&
-                sideA == sideC &&
-                sideB == sideD;
+    protected double getArea(){
+        return sides[0] * sides[1];
     }
-
-    public boolean isSquare(){
-        return this.sideA == this.sideB && this.sideA == this.sideC && this.sideA == this.sideD;
+    public double getPerimeter(){
+        return 2 * super.getPerimeter();
     }
-
-    public String getDescription() {
-        return isSquare() ? "Это квадрат" : "Это обычый прямоугольник со сторонами " + sideA + " " + sideB + " " + sideC + " " + sideD;
+    public String toString() {
+        return getType() + " " + "площадь: " + getArea() + ", " + " периметр: " + getPerimeter();
     }
 }

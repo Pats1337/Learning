@@ -1,23 +1,22 @@
-public class Triangle {
-    private final int sideA;
-    private final int sideB;
-    private final int sideC;
+public class Triangle extends Figure {
+    public Triangle(double a, double b, double c) {
+        super(new double[]{a, b, c});
+    }
 
-    public Triangle(int sideA, int sideB, int sideC) {
-        if (sideA > 0 &&
-                sideB > 0 &&
-                sideC > 0 &&
-                sideA + sideB > sideC &&
-                sideA + sideC > sideB &&
-                sideB + sideC > sideA) {
-            this.sideA = sideA;
-            this.sideB = sideB;
-            this.sideC = sideC;
-        } else {
-            throw new IllegalArgumentException(
-                    "wrong arguments to create triangle with sides " +
-                            sideA + " " + sideB + " " + sideC);
-        }
+    protected String getType() {
+        return "Треугольник";
+    }
 
+    protected double getArea() {
+        double p = (sides[0] + sides[1] + sides[2]) / 2;
+        return Math.sqrt(p * (p - sides[0]) * (p - sides[1]) * (p - sides[2]));
+    }
+
+    protected double getPerimeter() {
+        return super.getPerimeter();
+    }
+
+    public String toString(){
+        return getType() + " " + "площадь: " + getArea() + ", " + " периметр: " + getPerimeter();
     }
 }
