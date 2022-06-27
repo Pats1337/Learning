@@ -1,6 +1,6 @@
 public class Senior extends Developer {
-    public Senior(String name, String... stack) {
-        super(name, stack);
+    public Senior(String name, int stack) {
+        super(name, stack, DeveloperType.SENIOR);
     }
 
     protected String getName() {
@@ -11,8 +11,8 @@ public class Senior extends Developer {
         return 200000;
     }
 
-    protected String getStack() {
-        return String.join(", ", stack);
+    protected int getStack() {
+        return stack;
     }
 
 }

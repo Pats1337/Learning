@@ -1,29 +1,31 @@
 public abstract class Developer {
     protected final String name;
-    protected final String[] stack;
+    protected final int stack;
+    protected final DeveloperType type;
 
-    protected Developer(String name, String[] stack) {
+    protected Developer(String name, int stack, DeveloperType type) {
         this.name = name;
         this.stack = stack;
+        this.type = type;
     }
 
-    protected String getType() {
-        return getClass().getSimpleName();
+    protected DeveloperType getType() {
+        return type;
     }
 
     protected String getName() {
         return getClass().getSimpleName();
     }
 
-    protected String getStack() {
-        return String.join(", ", stack);
+    protected int getStack() {
+        return stack;
     }
 
     protected abstract int getSalary();
 
     public String toString() {
         return getType() + " " + getName() + "\n" +
-                "Владеет технологиями: " + getStack() + "\n" +
-                "Зарплата: " + getSalary() + "\n";
+                "Количество технологий: " + getStack() + "\n" +
+                "Предлагаемая зарплата: " + getSalary() + "\n";
     }
 }

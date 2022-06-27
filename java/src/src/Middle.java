@@ -1,6 +1,6 @@
 public class Middle extends Developer {
-    public Middle(String name, String... stack) {
-        super(name, stack);
+    public Middle(String name, int stack) {
+        super(name, stack, DeveloperType.MIDDLE);
     }
 
     protected String getName() {
@@ -11,8 +11,8 @@ public class Middle extends Developer {
         return 150000;
     }
 
-    protected String getStack() {
-        return String.join(", ", stack);
+    protected int getStack() {
+        return stack;
     }
 
 }
