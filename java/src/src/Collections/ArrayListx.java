@@ -15,5 +15,12 @@ public class ArrayListx {
         for (int i = 0; i < list.size(); i++) {
             System.out.println("i " + i + " item " + list.get(i));
         }
+        list.add(1, "third");
+        list.add("fourth");
+        System.out.println("added 2 items");
+        list.remove(list.size() - 1);
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println("i " + i + " item " + list.get(i));
+        }
     }
 }
