@@ -14,6 +14,12 @@ public class Task {
                 String designLink,
                 String testcase,
                 String buildLink) {
+        this.id = id;
+        this.status = status;
+        this.description = description;
+        this.designLink = designLink;
+        this.testcase = testcase;
+        this.buildLink = buildLink;
     }
 
     public int getId() {

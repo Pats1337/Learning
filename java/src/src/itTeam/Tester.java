@@ -1,7 +1,7 @@
 package itTeam;
 
 public class Tester extends Employee {
-    private Tester(TaskProgressCallback callback, String name) {
+    protected Tester(TaskProgressCallback callback, String name) {
         super(callback, name, Task.Status.READY_FOR_TESTING);
     }
 

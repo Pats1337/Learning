@@ -1,7 +1,7 @@
 package itTeam;
 
 public class Programmer extends Employee {
-    private Programmer(TaskProgressCallback callback, String name) {
+    protected Programmer(TaskProgressCallback callback, String name) {
         super(callback, name, Task.Status.READY_TO_DO);
     }
 
