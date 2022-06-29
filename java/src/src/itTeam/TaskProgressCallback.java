@@ -1,5 +1,5 @@
 package itTeam;
 
 public interface TaskProgressCallback {
-    void updateTask(Task task);
+    void updateTasks(Task oldTask, Task newTask);
 }
