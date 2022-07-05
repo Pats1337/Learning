@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
-public class DownloadFile implements Runnable {
+public class DownloadFile extends Thread {
     private final String url;
     private final String fileName;
     private final int id;
@@ -18,7 +18,8 @@ public class DownloadFile implements Runnable {
     }
 
     @Override
-    public void run() {
+    public synchronized void start() {
+        super.start();
         System.out.println(new Date() + " starting " + id);
         try (BufferedInputStream in = new BufferedInputStream(new URL(url).openStream());
              FileOutputStream fileOutputStream = new FileOutputStream(fileName)) {

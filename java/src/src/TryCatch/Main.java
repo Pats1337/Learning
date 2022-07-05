@@ -9,8 +9,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Starting at " + new Date());
         List<Thread> threads = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            threads.add(new Thread(new DownloadFile(URL, i + "video.mp4", i)));
+        for (int i = 0; i < 2; i++) {
+            threads.add((new DownloadFile(URL, i + "video.mp4", i)));
         }
         for (Thread thread : threads){
             thread.start();
