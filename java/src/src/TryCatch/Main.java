@@ -8,7 +8,13 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Starting at " + new Date());
-        new DownloadFile(URL, "someVideo.mp4").start(2);
+        Thread downloadThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                new DownloadFile(URL, "someVideo.mp4").start(2);
+            }
+        });
+        downloadThread.start();
         System.out.println("Finishing at " + new Date());
     }
 }
